@@ -9,9 +9,9 @@ const Faq = () => {
   // Toggle function to handle opening/closing
   const toggleFAQ = (index) => {
     if (openFAQ === index) {
-      setOpenFAQ(null); // If clicked FAQ is open, close it
+      setOpenFAQ(null);
     } else {
-      setOpenFAQ(index); // Otherwise, open the clicked FAQ
+      setOpenFAQ(index); 
     }
   };
 
@@ -57,7 +57,11 @@ const Faq = () => {
       {/* Left Sidebar */}
       <div className="md:w-1/4">
         <ul className="space-y-4 text-lg text-primary ">
-          <li className="font-bold">Sleepstiq Product</li>
+          {/* <li className="font-bold">Sleepstiq Product</li> */}
+          <li className="text-xl font-bold">
+  Sleepstiq
+  <span className="bg-faqBg py-2 px-1 pr-8 ml-1">Product</span>
+</li>
           <li>Order</li>
           <li>Melatonin</li>
         </ul>

@@ -3,14 +3,23 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Helper function to apply bold styling for active link
+  const getLinkClass = (path) => {
+    return pathname === path
+      ? "font-bold text-xl"
+      : "font-normal text-xl";
   };
 
   return (
@@ -28,22 +37,22 @@ const Navbar = () => {
       {/* Desktop menu */}
       <ul className="hidden sm:flex space-x-10 ml-2 lg:ml-24 flex-wrap">
         <li>
-          <Link href="/" className="font-bold text-xl">
+          <Link href="/" className={getLinkClass("/")}>
             Home
           </Link>
         </li>
         <li>
-          <Link href="/" className="font-normal text-xl">
+          <Link href="/" className={getLinkClass("/about")}>
             About
           </Link>
         </li>
         <li>
-          <Link href="/shop" className="font-normal text-xl">
+          <Link href="/shop" className={getLinkClass("/shop")}>
             Shop
           </Link>
         </li>
         <li>
-          <Link href="/faqs" className="font-normal text-xl">
+          <Link href="/faqs" className={getLinkClass("/faqs")}>
             FAQs
           </Link>
         </li>
@@ -68,16 +77,24 @@ const Navbar = () => {
           <div className="absolute top-6 -right-5 mx-4 my-2 bg-primary p-6 rounded-xl shadow-lg z-50">
             <ul className="list-none flex flex-col items-start">
               <li className="cursor-pointer text-white hover:text-btn">
-                <Link href="/">Home</Link>
+                <Link href="/" className={getLinkClass("/")}>
+                  Home
+                </Link>
               </li>
               <li className="cursor-pointer text-white hover:text-btn">
-                <Link href="/">About</Link>
+                <Link href="/" className={getLinkClass("/about")}>
+                  About
+                </Link>
               </li>
               <li className="cursor-pointer text-white hover:text-btn">
-                <Link href="/shop">Shop</Link>
+                <Link href="/shop" className={getLinkClass("/shop")}>
+                  Shop
+                </Link>
               </li>
               <li className="cursor-pointer text-white hover:text-btn">
-                <Link href="/faqs">FAQs</Link>
+                <Link href="/faqs" className={getLinkClass("/faqs")}>
+                  FAQs
+                </Link>
               </li>
             </ul>
           </div>
