@@ -73,7 +73,7 @@ export default function Home() {
               <h3 className="text-sm uppercase tracking-wide mb-2">
                 Our Amazing Story
               </h3>
-              <div className="text-4xl font-bold mb-4">10k+<span className="relative">Happ <span className="bg-faqBg pb-4">y Customers</span></span></div>
+              <div className="text-4xl font-bold mb-4">10k+<span className="relative">Happy <span className="bg-faqBg pb-4"> Customers</span></span></div>
               <p className="text-secondary mb-6">
                 There’s no secret sauce, no wizard behind the curtain. What
                 makes Aerolab tick is an interdisciplinary team with a framework

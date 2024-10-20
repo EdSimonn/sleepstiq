@@ -25,6 +25,7 @@ const Navbar = () => {
   return (
     <nav className="w-full absolute top-0 left-0 z-50 flex items-center sm:justify-start justify-between px-6 py-3 text-primary max-w-screen ss:p-10 p-4 lg:py-8 lg:px-32 md:px-24">
       {/* Logo on the left */}
+      <Link href="/" className={getLinkClass("/")}>
       <div className="flex items-center">
         <Image
           src="/images/nav-logo.png"
@@ -33,6 +34,8 @@ const Navbar = () => {
           height={50}
         />
       </div>
+      </Link>
+
 
       {/* Desktop menu */}
       <ul className="hidden sm:flex space-x-10 ml-2 lg:ml-24 flex-wrap">
