@@ -37,7 +37,7 @@ const ProductReviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white flex flex-col justify-between sm:px-6 px-10 sm:py-6 py-10 shadow-lg rounded-xs text-left"
+              className="bg-white flex flex-col justify-between sm:px-6 px-10 sm:py-6 py-10 shadow-lg rounded-md text-left"
             >
               <Image
                 src={review.image}

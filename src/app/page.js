@@ -120,7 +120,7 @@ export default function Home() {
               height={400}
               className="w-[85%] sm:w-full"
             />
-            <div className="absolute -bottom-10 sm:-right-10 right-0 bg-white rounded-lg shadow-lg p-4 sm:pr-24 pr-8 text-sm">
+            <div className="hidden md:block absolute -bottom-10 sm:-right-10 right-0 bg-white rounded-lg shadow-lg p-4 sm:pr-24 pr-8 text-sm">
               <ul className="space-y-1 w-sm">
                 <li className="flex items-start">
                   <span className="text-yellow-500">&#128522;</span>
